@@ -1,0 +1,49 @@
+//
+// buttons
+//
+
+.btn
+  // background: #683061
+  // border: 1px solid #6b15a1
+  border 0
+  border-radius: 100px
+  color: #fff
+  display: inline-block
+  font-family 'KonsensBold'
+  font-size 13px
+  padding 10.5px 26px 8.5px
+  @extend .transition--slow
+
+  @media (min-width: $screen-md-min)
+    font-size 15px
+    padding 9.5px 26px
+
+  // &:hover
+  //   color #fff
+
+  &.btn-white
+    background-color #fff
+    border 1.5px solid transparent
+    color $brand-primary
+    padding: 10.5px 26px 8.5px
+
+    @media (min-width: $screen-md-min)
+      padding 8px 26px
+
+    &:hover
+      background-color $brand-primary
+      border 1.5px solid #fff
+      color #fff
+
+  &.btn-white--border
+    background-color $brand-primary
+    border 1.5px solid #fff
+    color #fff
+
+    &:hover
+      background-color #fff
+      border-color transparent
+      color $brand-primary
+
+.btn-primary--nopadding
+  padding 9.5px 14px

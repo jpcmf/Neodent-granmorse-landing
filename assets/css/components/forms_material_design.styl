@@ -1,0 +1,319 @@
+//
+// settings
+//
+
+$form-font-size        = 18px
+$form-font-size-focus  = 12px
+$form-font-color-focus = #808285
+$form-font-color       = #808285
+
+/*
+	form starting stylings ----------------------------
+	ReferÃªncia: http://codepen.io/sevilayha/pen/IdGKH
+*/
+
+.f-group
+  make-row()
+
+  .f-group-12
+    make-xs-column(12)
+    make-sm-column(12)
+    // make-md-column(12)
+    // make-lg-column(12)
+
+  .f-group-6
+    make-xs-column(12)
+    make-sm-column(6)
+    // make-md-column(6)
+    // make-lg-column(6)
+
+  .f-group-3
+    make-xs-column(12)
+    make-sm-column(4)
+    // make-md-column(4)
+    // make-lg-column(4)
+
+  .f-group-2
+    make-xs-column(6)
+    make-sm-column(3)
+    // make-md-column(3)
+    // make-lg-column(3)
+
+.f-group
+  input
+  textarea
+  select
+    background-color transparent
+    border-radius 0
+    box-shadow none
+
+.f-group
+  select
+    appearance none
+
+  label
+    &.radio
+      cursor pointer
+      display inline-block
+      line-height 37px
+      left 0
+      margin 10px 0 20px 0
+      padding-right 0px
+      position relative
+      pointer-events auto
+      top 0
+      &:hover
+          .inner-r
+              box-sizing initial
+              transform scale(0.5)
+              opacity .5
+      input
+          height 1px
+          opacity 0
+          width 1px
+          &:checked + .outer .inner-r
+              transform scale(1)
+              opacity 1
+          &:checked + .outer
+              border 2px solid #808285
+          &:focus + .outer .inner-r
+              background-color #808285
+              transform scale(1)
+              opacity 1
+      .outer
+          background-color #fff
+          border 2px solid #889096
+          border-radius 50%
+          box-sizing initial
+          display block
+          float left
+          height 13px
+          margin 8px 9px 8px 0px
+          width 13px
+      .inner-r
+          background-color #808285
+          border-radius 50%
+          display block
+          height 7px
+          margin 3px
+          transform scale(0)
+          transition all 0.25s ease-in-out
+          opacity 0
+          width 7px
+
+.f-group
+	position relative
+	.f-group-12
+	.f-group-6
+	.f-group-3
+		margin-bottom 35px
+
+	input, textarea, select
+		font-size:$form-font-size;
+		padding:10px 0 10px 0;
+		display:block;
+		width:100%;
+		border:none;
+		color: $form-font-color;
+		border-bottom 1px solid $form-font-color
+
+	textarea
+		resize:none;
+	input:focus, textarea:focus
+		outline:none;
+	label
+		color:$form-font-color;
+		font-size:$form-font-size;
+		font-weight: 400
+		position:absolute;
+		pointer-events:none;
+		left 15px
+		top:6px;
+		transition:0.2s ease all;
+		// -moz-transition:0.2s ease all;
+		// -webkit-transition:0.2s ease all;
+
+	input:focus ~ label, input:valid ~ label, textarea:focus ~ label, textarea:valid ~ label
+		top:-15px;
+		font-size:$form-font-size-focus;
+		color $form-font-color-focus
+		font-weight 400
+	.bar
+		position:relative;
+		display:block;
+		width:100%;
+	.bar:before, .bar:after
+		content:'';
+		height:2px;
+		width:0;
+		bottom:0px;
+		position:absolute;
+		background:$form-font-color-focus;
+		transition:0.2s ease all;
+		// -moz-transition:0.2s ease all;
+		// -webkit-transition:0.2s ease all;
+	.bar:before
+		left:50%;
+
+	.bar:after
+		right:50%;
+
+	//active state
+	input:focus ~ .bar:before, input:focus ~ .bar:after, textarea:focus ~ .bar:before, textarea:focus ~ .bar:after
+		width:50%;
+
+	//HIGHLIGHTER
+	.highlight
+		position:absolute;
+		height:60%;
+		width:100px;
+		top:25%;
+		left:0;
+		pointer-events:none;
+		opacity:0.5;
+
+	//active state
+	input:focus ~ .highlight, textarea:focus ~ .highlight
+		// -webkit-animation:inputHighlighter 0.3s ease;
+		// -moz-animation:inputHighlighter 0.3s ease;
+		animation:inputHighlighter 0.3s ease;
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+	from { background:$form-font-color-focus; }
+	to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+	from { background:$form-font-color-focus; }
+	to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+	from { background:$form-font-color-focus; }
+	to 	{ width:0; background:transparent; }
+}
+
+//
+// status message form
+//
+
+.mensagem-form
+  .box
+    font-size 13px
+    font-weight 400
+    // margin 20px auto 0
+    margin 0 auto
+    max-width 300px
+    text-align center
+    position relative
+    // transform
+    ul
+      list-style none
+      padding 0
+      margin 0
+      li
+          line-height 12px
+    &.error
+        color red
+    &.success
+        color green
+  .m-progress
+    display inline-block
+    // margin-top -12px
+  .text
+    display inline-block
+    padding 0 0 0 25px
+
+//
+// input settings
+//
+
+.formSend form > .form-group
+  overflow hidden
+
+.formSend form > .form-group--mt15
+  margin-top 30px
+
+.formSend form > .form-group .f-group
+  margin 0
+
+.formSend form > .form-group .no-padding-left
+  // padding-left 0
+
+  @media (min-width: $screen-md-min)
+    padding-left 0
+
+form input[type=text]
+  border 1.5px solid $text-color
+  border-radius 100px
+  font-family 'KonsensSemibold'
+  font-size 14px
+  height auto
+  padding 12px 21px 10px
+
+//
+// checkbox settings
+//
+
+.checkbox
+    padding-left 20px
+    label
+      display inline-block
+      padding-left 5px
+      position relative
+      &::before
+        background-color #fff
+        border 2px solid #889096
+        border-radius 3px
+        content ""
+        display inline-block
+        height 14px
+        left 0
+        margin-left -20px
+        position absolute
+        top 6px
+        transition border 0.15s ease-in-out, color 0.15s ease-in-out
+        width 14px
+      &::after
+        color #555555
+        display inline-block
+        font-size 11px
+        height 16px
+        left 0
+        margin-left -20px
+        padding-left 3px
+        padding-top 1px
+        position absolute
+        top 0
+        width 16px
+    input[type="checkbox"]
+      opacity 0
+    input[type="checkbox"]:focus
+      & + label
+        &::before
+          outline 5px auto -webkit-focus-ring-color
+          outline thin dotted
+          outline-offset -2px
+    input[type="checkbox"]:checked
+      & + label
+        &::after
+          // content "\f00c"
+          background-color #889096
+          border-radius 50%
+          content " "
+          font-family 'FontAwesome'
+          height 6px
+          left 4px
+          top 10px
+          width 6px
+    input[type="checkbox"]:disabled
+      & + label
+        opacity 0.65
+        &::before
+          background-color #eeeeee
+          cursor not-allowed
+    &.checkbox-circle
+      label
+        &::before
+          border-radius 50%
+    &.checkbox-inline
+      margin-top 0

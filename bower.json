@@ -1,0 +1,20 @@
+{
+  "name": "app",
+  "version": "0.0.0",
+  "authors": [
+    "Joao Paulo Fricks <jpfricks@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "bootstrap": "^3.3.7",
+    "components-font-awesome": "^4.6.3"
+  }
+}

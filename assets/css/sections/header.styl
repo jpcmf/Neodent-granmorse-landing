@@ -1,0 +1,27 @@
+header nav > .container
+  border-bottom 1px solid #fff
+
+.navbar
+  position absolute
+  margin auto
+  left 0
+  right 0
+
+.navbar-brand
+    padding 20px 15px 0 15px
+    @media (min-width: $screen-md-min)
+      padding 20px 0 0 0
+    img
+      height 40px
+
+.nav > li > a
+  @extend .btn
+  background-color transparent
+
+.nav li:last-child
+  a
+    @extend .btn
+    background-color $brand-primary
+
+.navbar-nav
+  margin-top 20px

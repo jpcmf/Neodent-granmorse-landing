@@ -1,0 +1,480 @@
+//
+// main welcome
+//
+
+.main-welcome
+  // background url('../img/img-top-featured.jpg') no-repeat top center
+  background-image: url('../img/img-top-featured.jpg')
+  background-size: cover
+  background-position: center top
+  background-repeat: no-repeat
+  height 100vh
+
+.main-welcome__featured-text
+  h1
+  h2
+    color #fff
+  h1
+    font-size 28px
+    margin 0
+  h2
+    font-size 24px
+    margin-bottom 0
+    margin-top 5px
+
+.main-welcome__watch
+  color #fff
+  font-family 'KonsensBold'
+  font-size 18px
+  margin-top 23px
+  &:active
+  &:visited
+    color #fff !important
+
+  img
+    margin-right 16px
+
+.main-welcome__watch:hover
+  color #fff
+
+.main-welcome__watch:focus
+  color #fff
+
+.main-welcome__arrow-down
+  // margin-top 140px
+  position relative
+  top 140px
+  img
+    height 25px
+    width 42px
+
+//
+// main sticky menu
+//
+
+.main-sticky
+  background-color $brand-primary
+  min-height 80px
+  position -moz-sticky
+  position -ms-sticky
+  position -o-sticky
+  position -webkit-sticky
+  position sticky
+  top 0
+  z-index 300
+
+.main-sticky__button-left
+  // border 1.5px solid #fff
+  // border-radius 100px
+  // color #fff
+  font-family 'KonsensSemibold'
+  margin-top 20px
+  padding 9px 26px 7px
+  @media (min-width: $screen-sm-min)
+    padding 8px 26px
+
+.main-sticky .navbar-default
+  background-color $brand-primary
+
+.navbar-sticky .nav
+  text-align center
+  li
+    @media (min-width: $screen-sm-min)
+      margin-left 7px
+    a
+      margin-bottom 10px
+      @media (min-width: $screen-sm-min)
+        margin-bottom 0
+
+.navbar-sticky .nav li:last-child a
+  background-color #fff
+  color $brand-primary
+
+//
+// main implantes
+//
+
+.main-bg-gradient
+  background-image linear-gradient(to top, rgba(245, 244, 240, 0.65), rgba(255, 255, 255, 1.0) 75%)
+
+.main-implantes
+  h3
+    color $brand-primary
+    // font-size 36px
+    // letter-spacing 0.7px
+    // line-height 1.17
+
+  p
+    letter-spacing 0.3px
+    line-height 1.75
+
+  figure
+    img
+      margin auto
+
+.main-implantes--mt59
+  margin-top 59px
+
+  h3
+    font-size 36px
+    letter-spacing 0.7px
+    line-height 1.17
+
+  @media (min-width: $screen-sm-min)
+    h3
+    p
+      margin-top 151px
+
+.main-implantes--mt59 > .container
+  border-bottom 1px solid #808285
+
+.main-implantes--mt50
+  margin-top 50px
+  padding-bottom 70px
+
+  h3
+    font-size 28px
+    letter-spacing 0.6px
+    line-height 1.17
+
+  p
+    line-height 1.38
+
+  @media (min-width: $screen-sm-min)
+    h3
+      font-size 31px
+      margin-top 109px
+
+    p
+      margin-top 25px
+
+.main-implantes__img03
+  margin-top 67px
+
+.main-implantes__img04
+  margin-top 47px
+
+.main-implantes--mt79
+  margin-top 79px
+  padding-bottom 64px
+
+  @media (min-width: $screen-sm-min)
+    padding-bottom 0
+
+  h3
+    font-size 42px
+    letter-spacing 0.8px
+    margin-top 0
+
+    @media (min-width: $screen-sm-min)
+      margin-top 103px
+
+  h4
+    font-size 18px
+    letter-spacing 0.4px
+    line-height 1.33
+    text-transform uppercase
+    margin-top 30px
+    margin-bottom 20px
+
+  figure
+    position relative
+    margin-top 50px
+
+    @media (min-width: $screen-md-min)
+      margin-top 0
+
+    .bullet
+      @extend .transition--slow
+      cursor pointer
+
+      position absolute
+      z-index 2
+
+      &:hover
+       transform scale(1.1)
+       opacity .9
+
+      &.bullet1
+        top 58px
+        // left 307px
+        left 292px
+
+        @media (min-width: $screen-md-min)
+          left 240px
+        @media (min-width: $screen-lg-min)
+          left 307px
+
+      &.bullet2
+        top 90px
+        left 415px
+
+        @media (min-width: $screen-md-min)
+          left 362px
+        @media (min-width: $screen-lg-min)
+          left 429px
+
+      &.bullet3
+        top 213px
+        left 391px
+
+        @media (min-width: $screen-md-min)
+          left 339px
+        @media (min-width: $screen-lg-min)
+          left 406px
+
+      &.bullet4
+        top 350px
+        left 337px
+
+        @media (min-width: $screen-md-min)
+          left 285px
+        @media (min-width: $screen-lg-min)
+          left 352px
+
+      &.bullet5
+        top 426px
+        left 383px
+
+        @media (min-width: $screen-md-min)
+          left 331px
+        @media (min-width: $screen-lg-min)
+          left 398px
+
+      &.bullet6
+        top 492px
+        left 312px
+
+        @media (min-width: $screen-md-min)
+          left 260px
+        @media (min-width: $screen-lg-min)
+          left 327px
+
+    // .bullet:hover .bullet__icon
+    //   transform scale(1.1)
+    //   @extend .transition--slow
+
+    .zoomin-image
+      position absolute
+      z-index 1
+
+      &.zoomin-image-1
+        top -12px
+        left 18px
+
+        @media (min-width: $screen-md-min)
+          left -10px
+        @media (min-width: $screen-lg-min)
+          left 33px
+
+      &.zoomin-image-2
+        top 27px
+        right -5px
+
+        @media (min-width: $screen-md-min)
+          right -30px
+        @media (min-width: $screen-lg-min)
+          right 10px
+
+      &.zoomin-image-3
+        top 144px
+        right 10px
+
+        @media (min-width: $screen-md-min)
+          right -30px
+        @media (min-width: $screen-lg-min)
+          right 20px
+
+      &.zoomin-image-4
+        top 276px
+        left 12px
+
+        @media (min-width: $screen-md-min)
+          left -10px
+        @media (min-width: $screen-lg-min)
+          left 30px
+
+      &.zoomin-image-5
+        top 369px
+        right 0px
+
+        @media (min-width: $screen-md-min)
+          right -30px
+          // width 80%
+        @media (min-width: $screen-lg-min)
+          right 10px
+
+      &.zoomin-image-6
+        top 369px
+        left 10px
+
+        @media (min-width: $screen-md-min)
+          left -30px
+          // width 80%
+        @media (min-width: $screen-lg-min)
+          left 20px
+
+//
+// main domine
+//
+
+.main-domine
+  background-color #f5f4f0
+  min-height 700px
+  padding-bottom 58px
+  padding-top 42px
+
+  .container ~ .container
+    margin-top -70px
+
+  h3
+    color $brand-primary
+    font-size: 38px
+    display inline-block
+    margin-bottom 15px
+
+  h4
+    font-size 18px
+
+  .btn
+    margin-bottom 50px
+    margin-top 370px
+    position relative
+    z-index 200
+
+  @media (min-width: $screen-sm-min)
+    .btn
+      margin-bottom 0
+      margin-top 400px
+
+.main-domine__img01
+  position absolute
+  left 0px
+  right 0
+  margin 39px auto 0
+  // margin-top 39px
+  // left -290px
+
+// @media (min-width: 375px) and (max-width: 425px)
+//   .main-domine__img01
+//     border 1px solid red
+//     left 50px
+
+@media (min-width: $screen-sm-min)
+  .main-domine__img01
+    left 32px
+    margin-top 39px
+    z-index 1
+@media (min-width: $screen-md-min)
+  .main-domine__img01
+    left -66px
+
+.main-domine__img02
+  img
+    position absolute
+    left 0
+    margin auto
+    right 0
+    bottom 150px
+
+//
+// main contato
+//
+
+.main-contato
+  background-color #e7e7e8
+  padding 47px 0
+
+  h3
+    color $brand-primary
+    font-size 38px
+    display inline-block
+    margin-bottom 15px
+
+  h4
+    font-size 18px
+
+  form
+    margin-top 30px
+
+    .form-name
+      margin-bottom 15px
+      @media (min-width: $screen-sm-min)
+        margin-bottom 0
+
+    ul.list-inline
+      margin 0
+      li
+        display block
+        @media (min-width: $screen-sm-min)
+          display inline-block
+        label
+          margin 0
+
+    .btn
+     float right
+     font-size 18px
+     padding 8.5px 26px 6.5px 26px
+
+//
+// main lancamento
+//
+
+.main-lancamento
+  background-color #b49600
+  padding-top 51px
+  padding-bottom 81px
+
+  h3
+    color #fff
+    font-size 34px
+    margin-bottom 30px
+
+  .btn
+    font-size 18px
+    padding 8.5px 26px 6.5px 26px
+
+  @media (min-width: $screen-sm-min)
+    h3
+      font-size 48px
+
+//
+// main social
+//
+
+.main-social
+  padding-top 13px
+  padding-bottom 7px
+  text-align center
+
+  @media (min-width: $screen-md-min)
+    text-align left
+
+  figure > img
+    margin auto
+    @media (min-width: $screen-md-min)
+      margin 0
+
+  .list-inline
+    li
+      padding-left 10px
+    @media (min-width: $screen-md-min)
+      float right
+      margin-top: 30px
+      margin-bottom 0
+
+  .sprite
+    background-image url('../img/sprite-social.png')
+    background-repeat no-repeat
+    display block
+    height 20px
+    width 22px
+
+  .sprite.facebook
+    background-position -29px -28px
+  .sprite.twitter
+    background-position -74px -28px
+  .sprite.youtube
+    background-position -120px -28px
+  .sprite.linkedin
+    background-position -165px -28px

@@ -1,0 +1,8 @@
+.DS_Store
+/dist
+/node_modules
+/bower_components
+/assets/css/main.css
+/phpmailer
+/others
+contact-form.php
