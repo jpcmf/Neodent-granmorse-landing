@@ -12,6 +12,8 @@ var gulp       = require('gulp'),
     minifyHTML = require('gulp-minify-html'),
     notify     = require('gulp-notify');
 
+var gulpUtil = require('gulp-util');
+
 // Config path
 var config = {
     bowerDir: './bower_components'
@@ -49,8 +51,9 @@ gulp.task('assets', ['clean'], function () {
     var assets = useref.assets();
     return gulp.src('index.html')
         .pipe(assets)
-        .pipe(gulpif('*.js', uglify({mangle: false})))
-        .pipe(gulpif('*.css', minifyCSS()))
+        //.pipe(uglify().on('error', gulpUtil.log)) // notice the error event here
+        .pipe(gulpif('**/*.js', uglify({mangle: false})))
+        .pipe(gulpif('**/*.css', minifyCSS()))
         .pipe(assets.restore())
         .pipe(useref())
         .pipe(gulp.dest(distFolder));
